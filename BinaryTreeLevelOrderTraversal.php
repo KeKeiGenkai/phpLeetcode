@@ -10,7 +10,6 @@ class Solution {
         if ($root === null) {
             return $result;
         }
-
         $queue = [$root];
 
         while (!empty($queue)) {
