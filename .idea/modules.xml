@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/leetcode.iml" filepath="$PROJECT_DIR$/.idea/leetcode.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/PhpLeetcode.iml" filepath="$PROJECT_DIR$/.idea/PhpLeetcode.iml" />
+>>>>>>> 3f2371aa7d44d6eff3aad61706f18ff3d8bc2903
     </modules>
   </component>
 </project>

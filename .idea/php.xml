@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="LaravelPint">
     <laravel_pint_settings>
       <laravel_pint_by_interpreter asDefaultInterpreter="true" interpreter_id="7ccfe388-9ad6-49e1-85e7-30f4ba30392e">
@@ -12,6 +13,8 @@
       <phpmd_by_interpreter asDefaultInterpreter="true" interpreter_id="7ccfe388-9ad6-49e1-85e7-30f4ba30392e" timeout="30000" />
     </phpmd_settings>
   </component>
+=======
+>>>>>>> 3f2371aa7d44d6eff3aad61706f18ff3d8bc2903
   <component name="MessDetectorOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
@@ -22,6 +25,7 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PhpCodeSniffer">
     <phpcs_settings>
       <phpcs_by_interpreter asDefaultInterpreter="true" interpreter_id="7ccfe388-9ad6-49e1-85e7-30f4ba30392e" timeout="30000" />
@@ -40,6 +44,11 @@
       <psalm_fixer_by_interpreter asDefaultInterpreter="true" interpreter_id="7ccfe388-9ad6-49e1-85e7-30f4ba30392e" timeout="60000" />
     </Psalm_settings>
   </component>
+=======
+  <component name="PhpStanOptionsConfiguration">
+    <option name="transferred" value="true" />
+  </component>
+>>>>>>> 3f2371aa7d44d6eff3aad61706f18ff3d8bc2903
   <component name="PsalmOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>
