@@ -190,3 +190,60 @@ function wholeNumber($int1, $int2)
 
 //print wholeNumber(10, 6);
 
+
+//№1
+//Выведите в консоль все целые числа от 1 до 100.
+function oneHundred()
+{
+    for ($int = 1; $int <= 100; $int++) {
+        print($int . PHP_EOL);
+    }
+}
+//print oneHundred();
+
+//№2
+//Выведите в консоль все целые числа от -100 до 0.
+function minHundred()
+{
+    for ($int = -100; $int <= 0; $int++) {
+    print($int . PHP_EOL);
+    }
+}
+//print (minHundred());
+
+//№3
+//Выведите в консоль все целые числа от 100 до 1.
+function hundredOne()
+{
+    for ($int = 100; $int >= 1; $int--) {
+        print($int . PHP_EOL);
+    }
+}
+//print hundredOne();
+
+//№4
+//Выведите в консоль все четные числа из промежутка от 1 до 100.
+function hundredWhole()
+{
+    for ($i = 1; $i <= 100; $i++) {
+        if ($i % 2 == 0) {
+            print($i . PHP_EOL);
+        }
+    }
+}
+//print hundredWhole();
+
+
+//№5
+//Выведите в консоль все числа кратные трем в промежутке от 1 до 100.
+
+function hundredWholeXthree()
+{
+    for ($i = 1; $i <= 100; $i++) {
+        if ($i % 3 == 0) {
+            print($i . PHP_EOL);
+        }
+    }
+}
+
+//print hundredWholeXthree();
