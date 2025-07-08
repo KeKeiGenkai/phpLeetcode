@@ -166,12 +166,27 @@ function equalFrstLstChar($int)
 
 function moreOneChar($string)
 {
-
+    if (legthFromInt($string) < 1) {
+        return "nothing";
+    } else {
+        return mb_substr($string, -2, 1);
+    }
 }
+
+//print moreOneChar("zaraza");
 
 
 //№2
 //Даны два целых числа. Проверьте, что первое число без остатка делится на второе.
 
+function wholeNumber($int1, $int2)
+{
+    if (($int1 % $int2) == 0) {
+        return "whole";
+    } else {
+        return "Not Whole";
+    }
+}
 
-//
+//print wholeNumber(10, 6);
+
