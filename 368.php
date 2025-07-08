@@ -247,3 +247,65 @@ function hundredWholeXthree()
 }
 
 //print hundredWholeXthree();
+
+//№1
+//Найдите сумму всех целых чисел от 1 до 100.
+function sumHundred()
+{
+    $count = 0;
+    for ($int = 1; $int <= 100; $int++) {
+
+        $count = $count + $int;
+    }
+    return $count;
+}
+//print sumHundred();
+
+//№2
+//Найдите сумму всех целых четных чисел в промежутке от 1 до 100.
+function sumHundredWhole()
+{
+    $count = 0;
+    for ($int = 1; $int <= 100; $int++) {
+        if ($int % 2 == 0) {
+            $count = $count + $int;;
+        }
+    }
+    return $count;
+}
+//print sumHundredWhole();
+
+//№3
+//Найдите сумму всех целых нечетных чисел в промежутке от 1 до 100.
+function sumHundredNotWhole()
+{
+    $count = 0;
+    for ($int = 1; $int <= 100; $int++) {
+        if ($int % 2 != 0) {
+            $count = $count + $int;;
+        }
+    }
+    return $count;
+}
+//print sumHundredNotWhole();
+//№4
+//Даны два целых числа. Найдите остаток от деления первого числа на второе.
+function remainder($int1, $int2)
+{
+    return ($int1 % $int2);
+}
+//print remainder(20, 6);
+
+//№5
+//Дана некоторая строка. Переберите и выведите в консоль по очереди все символы с конца строки.
+
+function decrease($string)
+{
+    $fin = "";
+    $len = strlen($string);
+    for ($i = $len; $i >= 0; $i--) {
+        $fin = $fin . mb_substr($string, $i, 1);
+    }
+    return $fin;
+}
+//print decrease("Улыбок тебе дед Мокар");
