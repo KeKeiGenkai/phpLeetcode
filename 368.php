@@ -309,3 +309,66 @@ function decrease($string)
     return $fin;
 }
 //print decrease("Улыбок тебе дед Мокар");
+
+//Уровень 1.6 PHP
+//№1
+//Дан массив с числами. Найдите сумму квадратов элементов этого массива.
+function sumXsum($numbers)
+{
+    $result = 0;
+    $len = count($numbers);
+    for ($int = 0; $int <= ($len - 1); $int++) {
+        $result += ($numbers[$int] * $numbers[$int]);
+    }
+    return $result;
+}
+//print sumXsum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+//№2
+//Дан массив с числами. Найдите сумму квадратных корней элементов этого массива.
+function sumNotXsum($numbers)
+{
+    $result = 0;
+    $len = count($numbers);
+    for ($int = 0; $int <= ($len - 1); $int++) {
+        $result += sqrt($numbers[$int]);
+        print ($result . PHP_EOL);
+    }
+    return $result;
+}
+//print sumNotXsum([1, 4, 9, 16, 25, 36, 49, 64, 81, 100]);
+
+//№3
+//Дан массив с числами. Найдите сумму положительных элементов этого массива.
+function sumPositiveNum($numbers)
+{
+    $result = 0;
+    $len = count($numbers);
+    foreach ($numbers as $i)
+    {
+        if ($i > 0) {
+            $result += $i;
+            print ($i . PHP_EOL);
+        }
+    }
+    return $result;
+}
+//print sumPositiveNum([2, -3, 4, 5, 6, -7, -8, -9, 10]);
+
+//№4
+//Дан массив с числами. Найдите сумму тех элементов этого массива, которые больше нуля и меньше десяти.
+
+function sumPositiveNumBut($numbers)
+{
+    $result = 0;
+    $len = count($numbers);
+    foreach ($numbers as $i)
+    {
+        if (($i > 0) && ($i < 10)) {
+            $result += $i;
+            print ($i . PHP_EOL);
+        }
+    }
+    return $result;
+}
+//print sumPositiveNumBut([2, -3, 4, 5, 6, -7, -8, -9, 50, -50]);
