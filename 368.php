@@ -372,3 +372,57 @@ function sumPositiveNumBut($numbers)
     return $result;
 }
 //print sumPositiveNumBut([2, -3, 4, 5, 6, -7, -8, -9, 50, -50]);
+
+//Уровень 1.7
+
+//№1
+//Дана строка:
+//'abcde'
+//Получите массив букв этой строки.
+
+function stringToMass($string)
+{
+    $result = [];
+
+    for ($i = 0; $i < strlen($string); $i++) {
+        $result[] = mb_substr($string, $i, 1);
+    }
+
+    return $result;
+}
+
+//print_r( stringToMass("abcde"));
+
+//№2
+//Дано некоторое число:
+//12345
+//Получите массив цифр этого числа.
+
+$string = 12345;
+$array = str_split($string);
+
+//print_r($array);
+//print_r( stringToMass("12345"));
+
+
+//№3
+//Дано некоторое число:
+//12345
+//Переверните его:
+//54321
+
+//print decrease(12345);
+
+
+//№4
+//Дано некоторое число:
+//12345
+//Найдите сумму цифр этого числа.
+function oneTwoThreeAndMore($int)
+{
+    $processed = stringToMass($int);
+    return sumPositiveNum($processed);
+}
+
+print_r (oneTwoThreeAndMore(12345));
+
