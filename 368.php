@@ -424,5 +424,47 @@ function oneTwoThreeAndMore($int)
     return sumPositiveNum($processed);
 }
 
-print_r (oneTwoThreeAndMore(12345));
+//print_r (oneTwoThreeAndMore(12345));
 
+//Уровень 1.8
+//№1
+//Заполните массив целыми числами от 1 до 10.
+
+function massTen()
+{
+    $result = [];
+
+    for ($i = 1; $i <= 10; $i++) {
+        $result[] = ($i);
+    }
+
+    return $result;
+}
+//print_r(massTen());
+//№2
+//Заполните массив четными числами из промежутка от 1 до 100.
+
+function massEven()
+{
+    $result = [];
+
+    for ($i = 1; $i <= 100; $i++) {
+        if ($i  % 2 == 0) {
+            $result[] = ($i);
+
+        }
+    }
+
+    return $result;
+}
+//print_r(massEven());
+
+//№3
+//Дан массив с дробями:
+//[1.456, 2.125, 3.32, 4.1, 5.34]
+//Округлите эти дроби до одного знака в дробной части.
+$fractions = [1.456, 2.125, 3.32, 4.1, 5.34];
+$result = array_map(function($number) {
+    return round($number, 1);
+}, $fractions);
+//print_r($result);
