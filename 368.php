@@ -468,3 +468,43 @@ $result = array_map(function($number) {
     return round($number, 1);
 }, $fractions);
 //print_r($result);
+
+//Уровень 1.9
+//№1
+//Дан массив со строками. Оставьте в этом массиве только те строки, которые начинаются на http://.
+$links = ["http://dsfsdfsd", "https://dsfsdfsd", "lgbt://sd43efr34w", "oil", "187", "http://12345"];
+$fun = function() use ($links) {
+    $result = [];
+    foreach ($links as $i) {
+        if ((mb_substr($i, 0, 7)) == "http://") {
+            $result[] = $i;
+        }
+
+    };
+    return $result;
+};
+//print_r($fun());
+
+//№2
+//Дан массив со строками. Оставьте в этом массиве только те строки, которые заканчиваются на .html.
+$links2 = ["http://dsfsdfsd.html", "https://dsfsdfsd.htpps", "lgbt://sd43efr34w.hehehe", "oil", "187.html", "http://12345"];
+$funEnd = function() use ($links2) {
+    $result = [];
+    foreach ($links2 as $i) {
+        if ((mb_substr($i, -5, 5)) == ".html") {
+            $result[] = $i;
+        }
+
+    };
+    return $result;
+};
+//print_r($funEnd());
+//№3
+//Дан массив с числами. Увеличьте каждое число из массива на 10 процентов.
+$numbers = [23, 645, 678, 435, 6 ,45];
+//print_r($numbers);
+$final = [];
+foreach ($numbers as $i) {
+    $final[] = $i * 1.1;
+}
+//print_r($final);
