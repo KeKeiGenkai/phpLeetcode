@@ -65,3 +65,58 @@ $searchFirstHalfSumRes = function ($x)
     return $sum;
 };
 //print_r($searchFirstHalfSumRes($searchFirstHalfSum));
+
+//Уровень 2.2
+//№1
+//Дан массив с числами. Подсчитайте количество отрицательных чисел в этом массиве.
+$massIn = [-21, 23, 7, 233, -123, -56, -78, 23, 8, 0];
+$lvlOneDotOne = function () use ($massIn){
+    $resss = 0;
+    foreach ($massIn as $mass)
+    {
+        if ($mass < 0) {
+            $resss += 1;
+        }
+    }
+    return $resss;
+};
+
+//print($lvlOneDotOne());
+//№2
+//Дан массив с числами. Оставьте в нем только положительные числа.
+$lvlOneDotOneAnother = function () use ($massIn){
+    $resss = 0;
+    foreach ($massIn as $mass)
+    {
+        if ($mass > 0) {
+            $resss += 1;
+        }
+    }
+    return $resss;
+};
+
+//print($lvlOneDotOneAnother());
+
+//№3
+//Дана строка. Удалите предпоследний символ из этой строки.
+$delPerLast = function ($str)
+{
+    return substr_replace($str, '', -2, 1);
+};
+//print_r($delPerLast($stringSearchZero));
+//№4
+//Дана некоторая строка. Найдите позицию первого нуля в строке.
+
+//print($searchZero($stringSearchZero));
+
+//№5
+//Дан некоторый массив, например, вот такой:
+//[1, 2, 3, 4, 5, 6]
+//Поделите сумму первой половины элементов этого массива на сумму второй половины элементов.
+$array = [1, 2, 3, 4, 5, 6];
+$chunks = array_chunk($array, count($array) / 2);
+$sumFirst = array_sum($chunks[0]);
+$sumSecond = array_sum($chunks[1]);
+$result = $sumFirst / $sumSecond;
+
+echo $result;
