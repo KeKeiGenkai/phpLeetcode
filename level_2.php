@@ -266,3 +266,45 @@ foreach ($srtingNewFrstUp as $index) {
     }
 }
 //print_r($anotherResult);
+
+
+//Уровень 2.5
+//№1
+//Дана некоторая строка, например, вот такая:
+$stringHaveZeros = '023m0df0dfg0';
+//Получите массив позиций всех нулей в этой в строке.
+$massresults = [];
+for ($i = 0; $i < strlen($stringHaveZeros); $i++) {
+    if ($stringHaveZeros[$i] == 0) {
+        $massresults[] = $i + 1;
+    }
+}
+//print_r($massresults);
+
+//№2
+//Дана некоторая строка:
+$anotherLine = 'abcdefg';
+//Удалите из этой строки каждый третий символ. В нашем случае должно получится следующее:
+//'abdeg'
+$andAnotherRes = '';
+for ($i = 0; $i < strlen($anotherLine); $i++) {
+    if (($i + 1) % 3 != 0) {
+        $andAnotherRes = $andAnotherRes . $anotherLine[$i];
+    }
+}
+//print_r($andAnotherRes);
+
+//№3
+//Дан некоторый массив, например, вот такой:
+$massForTask = [1, 2, 3, 4, 5, 6];
+//Поделите сумму элементов, стоящих на четных позициях, на сумму элементов, стоящих на нечетных позициях.
+$evenNum = 0;
+$oddNum = 0;
+for ($i = 0; $i < count($massForTask); $i++) {
+    if (($i + 1)  % 2 == 0) {
+        $evenNum = $evenNum + $massForTask[$i];
+    } else {
+        $oddNum = $oddNum + $massForTask[$i];
+    }
+}
+//print_r($evenNum / $oddNum);
