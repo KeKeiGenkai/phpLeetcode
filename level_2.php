@@ -119,4 +119,75 @@ $sumFirst = array_sum($chunks[0]);
 $sumSecond = array_sum($chunks[1]);
 $result = $sumFirst / $sumSecond;
 
-echo $result;
+//echo $result;
+
+
+//Уровень 2.3 задачника PHP
+//№1
+//Даны два слова. Проверьте, что последняя буква первого слова совпадает с первой буквой второго слова.
+
+function twoWordsСompare($frst, $scnd)
+{
+    $charFrst = strtolower(mb_substr($frst, -1, 1));
+    $charScnd = strtolower(mb_substr($scnd, 0, 1));
+
+    $charScnd;
+    if ($charFrst == $charScnd) {
+        return "true";
+    } else {
+        return "false";
+    }
+
+}
+//print_r(twoWordsСompare("FIrst", "Second"));
+
+//№2
+//Дана некоторая строка. Найдите позицию третьего нуля в строке.
+$stringSearchZeroThree = '0hfdi490ghg599305j8ggh0d';
+
+$searchZeroAnother = function ($str)
+{
+    $ind = 0;
+    for ($i = 0; $i < strlen($str); $i++)
+    {
+
+        if ($str[$i] == '0') {
+             $ind ++;
+             if ($ind == 3) {
+                 return ($i + 1);
+             }
+        }
+    }
+};
+//print($searchZeroAnother($stringSearchZeroThree));
+
+//№3
+//Даны числа, разделенные запятыми:
+$innNumbersString = '12,34,56';
+//Найдите сумму этих чисел.
+
+$massNumbersNoSrting = explode(",", $innNumbersString);
+$resss = 0;
+foreach ($massNumbersNoSrting as $mass) {
+    $resss += $mass;
+}
+//print_r($resss);
+
+
+//№4
+//Дана дата в следующем формате:
+$dataString = '2025-12-31';
+$namesMass = ['year', 'month', 'day'];
+//Преобразуйте эту дату в следующий массив:
+//[
+//    'year'  => '2025',
+//    'month' => '12',
+//    'day'   => '31',
+//]
+$dataNoSrting = explode("-", $dataString);
+$dataNoSrtingKeys = [];
+for ($i = 0; $i < count($namesMass); $i++)
+{
+    $dataNoSrtingKeys[$namesMass[$i]] = $dataNoSrting[$i];
+}
+//print_r($dataNoSrtingKeys);
