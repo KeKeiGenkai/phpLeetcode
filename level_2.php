@@ -191,3 +191,78 @@ for ($i = 0; $i < count($namesMass); $i++)
     $dataNoSrtingKeys[$namesMass[$i]] = $dataNoSrting[$i];
 }
 //print_r($dataNoSrtingKeys);
+//Уровень 2.4
+//№1
+//Дана некоторая строка с буквами и цифрами. Получите позицию первой цифры в этой строке.
+$StringNumAndTxt = 'jklondefvu2345890ghiptu45';
+$searchFirstNum = function ($str)
+{
+    for ($i = 0; $i < strlen($str); $i++)
+    {
+        if (is_numeric($str[$i])) {
+            return ($i + 1);
+        }
+    }
+};
+//print($searchFirstNum($StringNumAndTxt));
+//№2
+//Дан объект с ключами и значениями. Запишите в первый массив ключи объекта, а во второй - значения.
+$massKeyValue = [
+    'firstKey' => 'firstValue',
+    'secondKey' => 'secondValue'
+];
+$onlyKeys = [];
+$onlyValuess = [];
+foreach ($massKeyValue as $key => $value) {
+    $onlyKeys[] = $key;
+    $onlyValuess[] = $value;
+};
+//print_r($onlyKeys);
+//print_r($onlyValuess);
+
+//№3
+//Дано число. Выведите в консоль количество четных цифр в этом числе.
+$evenCount = function ($inter) {
+    $int = strval($inter);
+    $count = 0;
+    for ($i = 0; $i < strlen($int); $i++)
+    {
+        if ($int[$i] % 2 == 0) {
+            $count ++;
+        }
+    }
+    return $count;
+};
+
+//print_r($evenCount(34678945));
+//№4
+//Дана некоторая строка:
+$notUpperStr = 'abcde';
+//Переведите в верхний регистр все нечетные буквы этой строки. В нашем случае должно получится следующее:
+//'AbCdE'
+$res = '';
+for ($i = 0; $i < strlen($notUpperStr); $i++) {
+    if ($i % 2 == 0) {
+        $res = $res . strtoupper($notUpperStr[$i]);
+    } else {
+        $res = $res . $notUpperStr[$i];
+    }
+}
+//print_r($res);
+//№5
+//Дана некоторая строка со словами:
+$stringa = 'aaa bbb ccc';
+//Сделайте заглавным первый символ каждого слова в этой строке. В нашем случае должно получится следующее:
+//'Aaa Bbb Ccc'
+$anotherResult = '';
+$srtingNewFrstUp = explode(" ", $stringa);
+foreach ($srtingNewFrstUp as $index) {
+    for ($i = 0; $i < strlen($index); $i++) {
+        if ($i == 0) {
+            $anotherResult = $anotherResult . strtoupper($index[$i]);
+        } else {
+            $anotherResult = $anotherResult . $index[$i];
+        }
+    }
+}
+//print_r($anotherResult);
