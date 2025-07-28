@@ -308,3 +308,103 @@ for ($i = 0; $i < count($massForTask); $i++) {
     }
 }
 //print_r($evenNum / $oddNum);
+
+//Уровень 2.6
+//№1
+//Дана некоторая строка с буквами и цифрами. Получите массив позиций всех цифр из этой строки.
+
+$stringForAnotherTask = 't25y80g2';
+$newResult = [];
+for ($i = 0; $i < strlen($stringForAnotherTask); $i++) {
+    if (is_numeric($stringForAnotherTask[$i])) {
+        $newResult[] = $i + 1;
+    }
+}
+//print_r($newResult);
+
+//№2
+//Дан массив с некоторыми числами, например, вот такой:
+$emaeAnotherMass = [123, 456, 789];
+//Напишите код, который перевернет числа в этом массиве по следующему принципу:
+//[321, 654, 987]
+$aaaBlatResult = [];
+foreach ($emaeAnotherMass as $indexoid) {
+    $indexoid = strval($indexoid);
+    $times = '';
+    for ($i = 0; $i < strlen($indexoid); $i++) {
+        $times = $indexoid[$i] . $times;
+    }
+    $aaaBlatResult[] = $times;
+}
+//print_r($aaaBlatResult);
+//№3
+//Дана некоторая строка с числом:
+$taKakZaebali = '1234567';
+//Отделите тройки цифр пробелами, начиная с конца числа. В нашем случае должно получится следующее:
+//'1 234 567'
+//$resString = $taKakZaebali;
+$x = 1;
+//for ($i = (strlen($taKakZaebali) - 1); $i >= 0; $i--) {
+//    if ($x % 3 == 0) {
+//        $resString = $resString[$i] . ' ';
+//    } else {
+//        $x ++;
+//    }
+//}
+$resString = '';
+for ($i = (strlen($taKakZaebali) - 1); $i >= 0; $i--) {
+    if ($i % 3 == 0) {
+        $x ++;
+        $resString = $taKakZaebali[$i] . " " . $resString;
+    } else {
+        $x ++;
+        $resString = $taKakZaebali[$i] . $resString;
+    }
+}
+//print_r($resString);
+
+//№4
+//Дана некоторая строка:
+$anotherBladskayaString = 'AbCdE';
+//Смените регистр букв этой строки на противоположный. В нашем случае должно получится следующее:
+//'aBcDe'
+$anotherBlatRes = '';
+for ($i = 0; $i < strlen($anotherBladskayaString); $i++) {
+    if (ctype_upper($anotherBladskayaString[$i])) {
+        $anotherBlatRes = $anotherBlatRes . strtolower($anotherBladskayaString[$i]);
+    } else {
+        $anotherBlatRes = $anotherBlatRes . strtoupper($anotherBladskayaString[$i]);
+    }
+}
+//print_r($anotherBlatRes);
+//№5
+//Дан некоторый массив с числами, например, вот такой:
+$zaebaloYze = [1, 2, 3, 4, 5, 6];
+//Слейте пары элементов вместе:
+//[12, 34, 56]
+
+$chunks = array_chunk($zaebaloYze, 2);
+$result = array_map(function($pair) {
+    return (int)($pair[0] . $pair[1]);
+}, $chunks);
+
+//print_r($result);
+
+//№6
+//Дана некоторая строка со словами:
+$plusOneMass = 'aaa bbb ccc eee fff';
+//Сделайте заглавным первый символ каждого второго слова в этой строке. В нашем случае должно получится следующее:
+//'aaa Bbb ccc Eee fff'
+$anotherResultPlusOne = '';
+$plusOneMassUnclimed = explode(" ", $plusOneMass);
+$i = 1;
+foreach ($plusOneMassUnclimed as $index) {
+    if ($i % 2 == 1) {
+        $anotherResultPlusOne = $anotherResultPlusOne . ucfirst($index) . ' ';
+        $i ++;
+    } else {
+        $anotherResultPlusOne = $anotherResultPlusOne . $index . ' ';
+        $i ++;
+    }
+}
+//print_r($anotherResultPlusOne);
