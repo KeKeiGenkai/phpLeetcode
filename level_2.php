@@ -408,3 +408,44 @@ foreach ($plusOneMassUnclimed as $index) {
     }
 }
 //print_r($anotherResultPlusOne);
+
+//Уровень 2.7
+//№1
+//Дана некоторая строка:
+$danaNekotorayaStroka = 'a bc def ghij';
+//Переведите в верхний регистр все подстроки, в которых количество букв меньше или равно трем. В нашем случае должно получится следующее:
+//'A BC DEF ghij'
+$futureResult = '';
+$changeNekotorayaStroka = explode(" ", $danaNekotorayaStroka);
+foreach ($changeNekotorayaStroka as $index) {
+    if (strlen($index) > 3) {
+        $futureResult = $futureResult . $index . ' ';
+    } else {
+        $futureResult = $futureResult . mb_strtoupper($index) . ' ';
+    }
+}
+//print $futureResult;
+
+//№2
+//Дан символ. Узнайте, в каком регистре этот символ - в верхнем или нижнем.
+$searcCase = function($char) {
+    if (ctype_upper($char) == true) {
+        return "Верхний регистр";
+    } else {
+        return "Нижний регистр";
+    }
+};
+//print_r($searcCase('I'));
+//№3
+//Дано некоторое число, например, такое:
+$numbersSnova = 123789;
+//Удалите из этого числа все нечетные цифры. В нашем случае получится такой результат:
+//28
+$evenOnly = '';
+$indexishe = (string) $numbersSnova;
+for ($i = 0; $i < strlen( $indexishe); $i++) {
+    if ($indexishe[$i] % 2 == 0) {
+    $evenOnly = $evenOnly . $indexishe[$i];
+    }
+}
+//print_r($evenOnly);
