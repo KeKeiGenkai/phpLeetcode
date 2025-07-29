@@ -495,3 +495,32 @@ $arr2 = ['a', 'b', 'c'];
 array_splice($arr1, 2, 0, $arr2);
 
 //print_r($arr1);
+
+
+//Уровень 2.9
+//№1
+//Дано некоторое число:
+$sumTwoNumb = "123456";
+//Найдите сумму пар цифр этого числа. В нашем случае имеется ввиду следующее:
+//12 + 34 + 56
+$massresultsSum = [];
+for ($i = 0; $i < strlen($sumTwoNumb); $i++) {
+    if (($i+1) % 2 == 0) {
+        $massresultsSum[] = $sumTwoNumb[$i-1] . $sumTwoNumb[$i];
+    }
+}
+$resopyat = 0;
+foreach ($massresultsSum as $index) {
+    $resopyat = $resopyat + $index;
+}
+
+//print_r($resopyat);
+
+//№2
+//Дан массив с числами:
+$recurceShowMass = [1, 2, 3, 4, 5];
+//Выведите в консоль элементы этого массива в обратном порядке.
+for ($i = count($recurceShowMass) - 1; $i >= 0 ; $i--) {
+    //print_r($recurceShowMass[$i]);
+}
+
