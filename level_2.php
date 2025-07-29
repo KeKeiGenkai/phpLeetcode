@@ -449,3 +449,49 @@ for ($i = 0; $i < strlen( $indexishe); $i++) {
     }
 }
 //print_r($evenOnly);
+//Уровень 2.8
+//№1
+//Дана строка с буквами. Проверьте, что в этой строке не более двух заглавных букв.
+$stringSbukvami = 'dhRG4f50FG';
+$varble = 0;
+for ($i = 0; $i < strlen($stringSbukvami); $i++) {
+    if (ctype_upper($stringSbukvami[$i])) {
+        $varble ++;
+    }
+}
+//print_r("Заглавных букв: " . $varble);
+//if ($varble < 2) {
+//    print_r(" это хорошо");
+//} else {
+//    print_r(" эт плохо");
+//}
+
+//№2
+//Дана некоторая строка:
+$andThisString = '1 22 333 4444 22 5555 1';
+//Удалите из этой строки все подстроки, в которых количество символов больше трех. В нашем случае должно получится следующее:
+//'1 22 333 22 1'
+$resSnova = '';
+$promMassStr = explode(" ", $andThisString);
+foreach ($promMassStr as $index) {
+    if (strlen($index) <= 3) {
+        $resSnova = $resSnova . $index . ' ';
+    }
+}
+//print_r($resSnova);
+
+//№3
+//Даны два массива:
+//$arr1 = [1, 2, 3];
+//$arr2 = ['a', 'b', 'c'];
+//Слейте эти массивы в новый массив следующим образом:
+//[1, 2, 'a', 'b', 'c', 3]
+
+$arr1 = [1, 2, 3];
+$arr2 = ['a', 'b', 'c'];
+
+// Вставляем в массив $arr1, начиная со 2-й позиции (сразу перед '3'),
+// удаляя 0 элементов, массив $arr2.
+array_splice($arr1, 2, 0, $arr2);
+
+//print_r($arr1);
