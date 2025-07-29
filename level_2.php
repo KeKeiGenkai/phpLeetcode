@@ -524,3 +524,63 @@ for ($i = count($recurceShowMass) - 1; $i >= 0 ; $i--) {
     //print_r($recurceShowMass[$i]);
 }
 
+//Уровень 2.10
+
+//№1
+//Дана строка с буквами и цифрами. Проверьте, что в этой строке не более трех букв.
+$lastToDo = 'g32ykjk5';
+$toDoCount = 0;
+for ($i = 0; $i < strlen($lastToDo); $i++) {
+    // Проверяем, является ли символ буквой
+    if (ctype_alpha($lastToDo[$i])) {
+        $toDoCount++;
+    }
+}
+//if ($toDoCount >= 3) {
+//    print "Больше 3";
+//} else {
+//    print "Меньше или равно 3";
+//}
+
+//№2
+//Дано число. Получите первую четную цифру с конца этого числа.
+$LastIntToDoin = 2345134333;
+$LastIntToDo = (string)$LastIntToDoin;
+for ($i = strlen($LastIntToDo) - 1; $i >= 0; $i--) {
+    if (($LastIntToDo[$i]) % 2 == 0) {
+        //print_r($LastIntToDo[$i]);
+        //exit();
+    }
+}
+
+
+
+//№3
+//Дана некоторая строка:
+//'abcde abcde abcde'
+//Замените в ней первый символ каждого слова на '!':
+//'!bcde !bcde !bcde'
+
+$LastStringa = 'abcde abcde abcde';
+$anotherResultLast = '';
+$srtingNewFrstUpLast = explode(" ", $LastStringa);
+foreach ($srtingNewFrstUpLast as $index) {
+    for ($i = 0; $i < strlen($index); $i++) {
+        if ($i == 0) {
+            $anotherResultLast = $anotherResultLast . str_replace($index[$i], "!", $index) . " ";
+        }
+    }
+}
+//print_r($anotherResultLast);
+
+//№4
+//Дан массив с числами:
+$ultraLastMassive = [1, 2, 3, 3, 4, 5];
+//Проверьте, что в этом массиве есть два одинаковых элемента подряд.
+$lastIndex = 0;
+foreach ($ultraLastMassive as $index) {
+    if ($index == $lastIndex) {
+        //print_r($index . " встречается более одного раза подряд");
+    }
+    $lastIndex = $index;
+}
